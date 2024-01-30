@@ -15,21 +15,17 @@
 
     <script>
         function calculate() {
-            // Get user input
             const num1 = parseFloat(document.getElementById("num1").value);
             const num2 = parseFloat(document.getElementById("num2").value);
 
-            // Check if input is valid
             if (isNaN(num1) || isNaN(num2)) {
                 document.getElementById("result").innerText = "Please enter valid numbers.";
                 return;
             }
 
-            // Calculate multiplication and division
             const mulResult = num1 * num2;
             const divResult = num1 / num2;
 
-            // Display the results
             document.getElementById("result").innerText = "Multiplication: " + mulResult + "\nDivision: " + divResult;
         }
     </script>
