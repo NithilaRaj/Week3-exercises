@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Create a Variable</h1>
+    
+    <label for="varName">Enter a variable name:</label>
+    <input type="text" id="varName">
+    <button onclick="createVar()">Create Variable</button>
+
+    <p id="output"></p>
+
+    <script>
+        function createVar() {
+            const varName = document.getElementById("varName").value;
+
+            if (varName === "") {
+                alert("Please enter a variable name.");
+                return;
+            }
+
+            window[varName] = varName;
+
+            document.getElementById("output").innerText = "Variable " + varName + " has been created: " + window[varName];
+        }
+    </script>
+</body>
+</html>

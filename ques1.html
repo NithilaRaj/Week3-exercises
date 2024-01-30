@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <p>Today is : <span id="days"></span></p>
+    <p>Current time is : <span id="currentTime"></span></p>
+
+    <script>
+        const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+        const d = new Date();
+        let day = weekday[d.getDay()];
+        document.getElementById("days").innerText = day;
+
+
+        let hours = d.getHours();
+        const ampm = hours >= 12 ? "PM" : "AM";
+        hours = hours % 12 || 12; // Convert to 12-hour format if needed
+        const minutes = d.getMinutes();
+        const seconds = d.getSeconds();
+
+        const formattedTime = `${hours} ${ampm} : ${minutes} : ${seconds}`;
+        document.getElementById("days").innerText = `${day}.`;
+        document.getElementById("currentTime").innerText = `${formattedTime}`;
+    </script> 
+</body>
+</html>
